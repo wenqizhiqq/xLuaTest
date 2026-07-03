@@ -11,3 +11,4 @@ XLua C# 源码去 Unity 剥离处理 提取 XLua 运行时核心Runtime与Gen源
 编写测试用例校验虚拟机运行能力：将 Lua 脚本以 UTF-8 编码转为二进制字节数组，调用DoString(byte[])重载接口执行代码；针对 Lua 整型默认映射 C# long、强制转换double报错问题，采用Convert.ToDouble()实现安全类型转换，成功读取脚本多返回值，弹窗输出运算结果，验证虚拟机加载、脚本执行链路完全通畅。
 
 内存层面使用using语法包裹LuaEnv实例，程序退出作用域时自动释放 Lua 虚拟机资源，规避频繁创建虚拟机引发的内存泄漏问题。整套适配流程验证，剥离 Unity 后的原生 XLua 可稳定在 WinForm 桌面程序运行，满足工控 Lua 编辑器全套开发需求。 
+![Uploading image.png…]()
